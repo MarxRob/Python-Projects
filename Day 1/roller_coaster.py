@@ -1,11 +1,30 @@
+# Initial print that presents the program and first input that'll dictate the program's procedure
 print("Welcome to the Ultimate Roller Coaster Checker 2023 Edition!")
-height = int(input("Enter your height in cm: "))
 
+while True:
+    try:
+        height = int(input("Enter your height in cm: "))
+        break
+    except ValueError:
+        print("Please, enter your height in numbers.")
+
+# Variables related to prices are declared
 bill = 0
+age = 0
+midlife_crisis = ''
 photo_price = 3
 
+# If/else that returns either the final bill or a warning saying that the user isn't tall enough
 if height >= 120:
-    age = int(input("Enter your age in earth years: "))
+    # While loops as this one, along side with try/except blocks will be used to prevent the user from inserting
+    # wrong answers and ending up breaking the program
+    while True:
+        try:
+            age = int(input("Enter your age in earth years: "))
+            break
+        except ValueError:
+            print("Please, enter your age in numbers.")
+            continue
     if age < 12:
         bill += 5
         print(f"You can ride!\n"
@@ -15,7 +34,13 @@ if height >= 120:
         print(f"You can ride!\n"
               f"The youth ticket is U${bill},00.")
     elif 45 < age < 55:
-        midlife_crisis = input("Are you having a midlife crisis? Y or N: ")
+        while True:
+            try:
+                midlife_crisis = input("Are you having a midlife crisis? Y or N: ").upper()
+                break
+            except ValueError:
+                print("Please, enter a valid answer")
+                continue
         if midlife_crisis == "Y":
             print("Everything's gonna be fine, my friend. Have a ride on the house❤️!")
         else:
