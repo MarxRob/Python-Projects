@@ -1,3 +1,4 @@
+# Presenting the program
 print('''
 *******************************************************************************
           |                   |                  |                     |
@@ -23,20 +24,49 @@ ____/______/______/______/______/_____"=.o|o_.--""___/______/______/______/____
 print("Welcome to Treasure Island.")
 print("Your mission is to find the treasure.")
 
-choice_1 = input("The leads you studied for months got you in front of a bifurcation. Do you want to go to the left or to the right?: ").lower()
+choice_1 = ''
+choice_2 = ''
+choice_3 = ''
+
+# First input from the user, with its answer type assured by the while loop, as in the rest of the code.
+while True:
+    try:
+        choice_1 = input("The leads you studied for months got you in front of a bifurcation. Do you want to go to the left "
+                 "or to the right?: ").lower()
+        break
+    except ValueError:
+        print("Please enter a valid answer.")
+        continue
+
 if "right" in choice_1:
-    print("Hell nah, friend. You literally stepped into a black hole! You've been spaghettified and then died immediately. ")
+    print("Hell nah, friend. You literally stepped into a black hole! You've been spaghettified "
+          "and then died immediately. ")
 elif "left" in choice_1:
-    choice_2 = input("You walked a lot and finally reached a lake. There's a boat slowly drifting your way, coming from a faraway island. Do you want to "
-                     "swim "
-                     "or wait?: ").lower()
+    while True:
+        try:
+            choice_2 = input("You walked a lot and finally reached a lake. There's a boat slowly drifting your way,"
+                             " coming from a faraway island. Do you want to swim or wait?: ").lower()
+            break
+        except ValueError:
+            print("Please enter a valid answer.")
+            continue
     if "swim" in choice_2:
-        print("You feel a slimy touch on your feet. Fear grabs your soul. You're suddenly pulled to the depths of the lake... and never comes back.")
+        print("You feel a slimy touch on your feet. Fear grabs your soul. You're suddenly pulled to the depths "
+              "of the lake... and never comes back.")
     elif "wait" in choice_2:
-        choice_3 = input("Your patience was rewarded. You ride the boat to the island and find a probably haunted mansion. This one is quite "
-                         "peculiar, though: there's two big doors at the entrance. Do you enter the white one or the purple one?: ").lower()
+        while True:
+            try:
+                choice_3 = input("Your patience was rewarded. You ride the boat to the island and find a probably "
+                                 "haunted mansion. This one is quite peculiar, though: there's two big doors at the "
+                                 "entrance. Do you enter the white one or the purple one?: ").lower()
+                break
+            except ValueError:
+                print("Please enter a valid answer.")
+                continue
         if "white" in choice_3:
-            print("What the actual fuck?! You ran into Fabio naked!! Your mind crumbled and you're now in an unending catatonic state(you starved "
+            print("What the actual fuck?! You ran into Fabio naked!! Your mind crumbled and you're now in an unending "
+                  "catatonic state(you starved "
                   "afterwards)")
         elif "purple" in choice_3:
-            print("You found the treasure chest! You opened it and, inside, there was a picture of Beetle Juice and a Manuel Gomes soundtrack disc.")
+            print("You found the treasure chest! You opened it and, inside, there was a picture of Beetle Juice and a "
+                  "Manuel Gomes soundtrack disc.")

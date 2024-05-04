@@ -16,7 +16,7 @@ photo_price = 3
 
 # If/else that returns either the final bill or a warning saying that the user isn't tall enough
 if height >= 120:
-    # While loops as this one, along side with try/except blocks will be used to prevent the user from inserting
+    # While loops as this one, alongside with try/except blocks will be used to prevent the user from inserting
     # wrong answers and ending up breaking the program
     while True:
         try:
