@@ -1,11 +1,11 @@
-import data, arts, hangmanBrain
+import data, arts, hangman_brain
 
 
 def play_game():
     wants_to_play = True
 
     while wants_to_play:
-        hangman = hangmanBrain.HangmanBrain(
+        hangman = hangman_brain.HangmanBrain(
             win_art=arts.saved, stages_art=arts.stages, logo_art=arts.logo_hangman
         )
 
