@@ -13,11 +13,15 @@ class Scoreboard(Turtle):
         self.write(font=("ARIAL", 12, ""), arg=f"Score: {self.score}", align="center")
 
     def change_score(self):
+        """Adds a point to the scoreboard"""
+
         self.clear()
         self.score += 1
         self.write(f"Score: {self.score}")
 
     def game_over(self):
+        """Game over screen, displaying the aforementioned title and the player's final score."""
+
         self.clear()
         self.goto(0, 0)
         self.write(font=("ARIAL", 20, ""), arg="GAME OVER", align="center")
